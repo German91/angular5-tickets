@@ -1,0 +1,21 @@
+<div class="card ticket-item">
+  <div class="card-header">
+    <label class="badge" [ngClass]="statusClass()">
+      {{ ticket.status | uppercase }}
+    </label>
+  </div>
+
+  <div class="card-body">
+    <h3>{{ ticket.title }}</h3>
+    <hr />
+    <p>{{ ticket.description }}</p>
+
+    <div>
+      <a [routerLink]="['/tickets', ticket._id]" class="btn btn-primary">View</a>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <small>Created at {{ ticket.created_at | date }}</small>
+  </div>
+</div>

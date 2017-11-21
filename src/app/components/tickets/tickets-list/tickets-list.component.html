@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 mx-auto">
+      <h1>My Tickets</h1>
+      <hr />
+
+      <div class="row" *ngFor="let ticket of tickets">
+        <app-ticket-item class="col" [ticket]="ticket"></app-ticket-item>
+      </div>
+    </div>
+  </div>
+</div>

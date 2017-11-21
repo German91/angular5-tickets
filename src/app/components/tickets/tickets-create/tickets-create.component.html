@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 mx-auto">
+      <h1>New Ticket</h1>
+      <hr />
+
+      <form #ticketForm="ngForm" (submit)="handleSubmit(ticketForm)">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" class="form-control" ngModel />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea name="description" id="description" cols="30" rows="10" class="form-control" ngModel></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">Create</button>
+      </form>
+    </div>
+  </div>
+</div>
